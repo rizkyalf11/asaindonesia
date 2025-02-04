@@ -25,7 +25,7 @@ export default function RootLayout({
       <body className={`${poppins.className} antialiased`}>
         <Navbar />
         {children}
-        <div className="h-[3000px] w-full bg-gradient-to-bl from-amber-400 to-red-500"></div>
+        {/* <div className="h-[3000px] w-full bg-gradient-to-bl from-amber-400 to-red-500"></div> */}
       </body>
     </html>
   );
