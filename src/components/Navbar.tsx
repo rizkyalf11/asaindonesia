@@ -81,18 +81,18 @@ export default function Navbar() {
       </div>
 
       <div
-        className={`${isActive ? "-translate-y-0" : "-translate-y-full"} duration-400 absolute z-40 h-screen w-screen border-t border-slate-200 bg-white px-3 transition lg:hidden`}
+        className={`${isActive ? "-translate-y-0" : "-translate-y-full"} absolute z-40 h-screen w-full border-t border-slate-200 bg-white transition duration-300 lg:hidden`}
       >
-        <nav className="container mx-auto flex flex-col">
+        <nav className="container mx-auto flex flex-col px-3">
           {links.map((_, i) => (
             <Link
               key={i}
-              className={`${buttonVariants({ variant: "link" })} relative justify-start pl-0 font-medium hover:text-slate-700`}
+              className={`${buttonVariants({ variant: "link" })} relative justify-between pl-0 font-medium hover:text-slate-700`}
               href={_.href}
             >
               {_.name}
 
-              <MoveUpRight className="absolute right-6 opacity-50" />
+              <MoveUpRight className="absolute -right-1 -translate-x-1/2 opacity-50" />
             </Link>
           ))}
         </nav>
